@@ -1,0 +1,219 @@
+/* ---- Global ---- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #000000, #0f172a, #1e293b);
+  background-size: 200% 200%;
+  animation: gradientMove 12s ease infinite;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* ---- Container ---- */
+.container {
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(12px);
+  border-radius: 14px;
+  padding: 35px;
+  width: 100%;
+  max-width: 440px;
+  text-align: center;
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 4px 25px rgba(0,0,0,0.3);
+}
+
+/* ---- Title ---- */
+h1 {
+  font-weight: 600;
+  font-size: 26px;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+}
+
+p {
+  font-size: 14px;
+  margin-bottom: 20px;
+  opacity: 0.9;
+}
+
+/* ---- Input ---- */
+input {
+  width: 100%;
+  padding: 14px 15px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: none;
+  font-size: 15px;
+  outline: none;
+  background: rgba(255,255,255,0.13);
+  color: #fff;
+}
+
+input::placeholder {
+  color: rgba(255,255,255,0.45);
+}
+
+/* ---- Button ---- */
+button {
+  width: 100%;
+  padding: 14px;
+  background: #22c55e;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+button:hover {
+  background: #16a34a;
+  transform: translateY(-1px);
+}
+
+/* ---- Result ---- */
+#result {
+  margin-top: 18px;
+  font-size: 15px;
+  word-break: break-all;
+}
+
+/* ---- Animation ---- */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ========================================================= */
+/*                     🔥 UPGRADE UI IKLAN 🔥                 */
+/* ========================================================= */
+
+/* ===== Banner Ad refinement ===== */
+#banner-ad > div {
+  background: rgba(255,255,255,0.12) !important;
+  border: 1px solid rgba(255,255,255,0.18);
+  backdrop-filter: blur(12px);
+  transition: 0.25s;
+  border-radius: 12px;
+  margin-top: 8px;
+}
+
+#banner-ad > div:hover {
+  background: rgba(255,255,255,0.18);
+}
+
+/* ===== Sticky Ad refinement ===== */
+#sticky-ad {
+  height: 52px !important;
+  transform: translateY(100%);
+  transition: .35s ease-in-out;
+  border-radius: 14px 14px 0 0;
+  font-size: 14px;
+}
+
+/* sticky muncul halus */
+#sticky-ad.show {
+  transform: translateY(0%);
+}
+
+/* tombol close sticky */
+#sticky-ad button {
+  border-radius: 6px;
+  padding: 2px 8px;
+  background: rgba(255,255,255,0.08) !important;
+  transition: .2s;
+}
+
+#sticky-ad button:hover {
+  background: rgba(255,255,255,0.18) !important;
+}
+
+/* text kecil mendukung server */
+#banner-ad p {
+  margin-bottom: 8px !important;
+  opacity: .7 !important;
+}
+
+/* link download biar tombol hijau rapih */
+#result a {
+  margin-top: 10px;
+  background:#22c55e;
+  color:#fff !important;
+  padding:12px 20px;
+  border-radius:10px;
+  font-weight:600;
+  text-decoration:none;
+  display:inline-block;
+  transition:0.25s;
+}
+
+#result a:hover {
+  background:#16a34a;
+  transform:translateY(-1px);
+}
+/* ============================
+   📱 MOBILE OPTIMIZATION
+============================ */
+@media (max-width: 480px) {
+
+  body {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 22px;
+    margin-bottom: 8px;
+    line-height: 1.3;
+  }
+
+  p {
+    font-size: 13px;
+    margin-bottom: 16px;
+  }
+
+  input {
+    padding: 12px 14px;
+    font-size: 14px;
+  }
+
+  button {
+    padding: 12px;
+    font-size: 15px;
+  }
+
+  /* hasil download */
+  #result a {
+    font-size: 15px;
+    padding: 12px;
+    margin-top: 12px;
+    word-break: keep-all; /* 🧠 biar ga pecah “vid eo” */
+  }
+
+  /* banner iklan */
+  #banner-ad > div {
+    height: 70px; /* lebih pendek biar gak makan layar */
+    font-size: 13px;
+  }
+
+  /* sticky bawah */
+  #sticky-ad {
+    height: 48px !important;
+    font-size: 13px;
+  }
+
+  #sticky-ad span {
+    font-size: 13px;
+  }
+}
